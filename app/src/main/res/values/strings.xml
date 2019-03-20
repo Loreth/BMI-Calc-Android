@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BMI</string>
+    <string name="bmi_main_mass_kg">Mass [kg]</string>
+    <string name="bmi_main_default_bmi_display_value">\?</string>
+    <string name="bmi_main_count_bmi">Count BMI</string>
+    <string name="bmi_main_height_cm">Height [cm]</string>
+    <string name="bmi_main_bmi_default_description">Normal</string>
+    <string name="bmi_weight_hint">65</string>
+    <string name="bmi_height_hint">180</string>
+    <string name="bmi_menu">Menu</string>
+</resources>
