@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="bmi_margin_left_right">8dp</dimen>
-    <dimen name="bmi_margin_bottom">2dp</dimen>
-    <dimen name="bmi_margin_bottom_elements">2dp</dimen>
-    <dimen name="bmi_margin_top">2dp</dimen>
-    <dimen name="bmi_margin_top_elements">2dp</dimen>
-    <dimen name="bmi_value_text_size">25sp</dimen>
-    <dimen name="bmi_mass_label_text_size">11sp</dimen>
-    <dimen name="bmi_height_label_text_size">11sp</dimen>
-    <dimen name="bmi_status_text_size">11sp</dimen>
-    <dimen name="bmi_calculate_button_text_size">11sp</dimen>
+    <dimen name="bmi_margin_bottom">8dp</dimen>
+    <dimen name="bmi_margin_bottom_elements">8dp</dimen>
+    <dimen name="bmi_margin_top">3dp</dimen>
+    <dimen name="bmi_margin_bottom_main_img">3dp</dimen>
+    <dimen name="bmi_margin_top_elements">8dp</dimen>
+    <dimen name="bmi_value_text_size">34sp</dimen>
+    <dimen name="bmi_mass_label_text_size">14sp</dimen>
+    <dimen name="bmi_height_label_text_size">14sp</dimen>
+    <dimen name="bmi_status_text_size">14sp</dimen>
+    <dimen name="bmi_calculate_button_text_size">14sp</dimen>
 </resources>

@@ -3,11 +3,13 @@
     <dimen name="bmi_margin_left_right">8dp</dimen>
     <dimen name="bmi_margin_bottom">8dp</dimen>
     <dimen name="bmi_margin_bottom_elements">8dp</dimen>
-    <dimen name="bmi_margin_top">8dp</dimen>
+    <dimen name="bmi_margin_top">3dp</dimen>
+    <dimen name="bmi_margin_bottom_main_img">8dp</dimen>
     <dimen name="bmi_margin_top_elements">8dp</dimen>
-    <dimen name="bmi_value_text_size">30sp</dimen>
+    <dimen name="bmi_value_text_size">34sp</dimen>
     <dimen name="bmi_mass_label_text_size">14sp</dimen>
     <dimen name="bmi_height_label_text_size">14sp</dimen>
     <dimen name="bmi_status_text_size">14sp</dimen>
     <dimen name="bmi_calculate_button_text_size">14sp</dimen>
+    <dimen name="bmi_h_guideline_percent">0.3</dimen>
 </resources>

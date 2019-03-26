@@ -1,6 +1,7 @@
 package com.example.laby2
 
 import com.example.laby2.logic.BmiForKgCm
+import com.example.laby2.logic.BmiForLbIn
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -17,8 +18,14 @@ class ExampleUnitTest {
     }
 
     @Test
-    fun for_valid_data_should_count_bmi() {
-        val bmi = BmiForKgCm(65, 180)
-        assertEquals(20.061, bmi.countBmi(), 0.001)
+    fun for_valid_data_should_count_bmi_kg_cm() {
+        val bmi = BmiForKgCm()
+        assertEquals(20.061, bmi.countBmi(65, 180), 0.001)
+    }
+
+    @Test
+    fun for_valid_data_should_count_bmi_lb_in() {
+        val bmi = BmiForLbIn()
+        assertEquals(20.082, bmi.countBmi(144, 71), 0.001)
     }
 }

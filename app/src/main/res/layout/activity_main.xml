@@ -9,20 +9,18 @@
     <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
                                                 android:id="@+id/guideline"
                                                 android:orientation="horizontal"
-                                                app:layout_constraintGuide_percent="0.25"/>
+                                                app:layout_constraintGuide_percent="@dimen/bmi_h_guideline_percent"/>
 
     <ImageView
             android:layout_width="0dp"
-            android:layout_height="0dp" tools:srcCompat="@drawable/avatar_bmi"
-            android:id="@+id/imageView2" app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="0dp" tools:srcCompat="@drawable/bmi_main"
+            android:id="@+id/bmi_main_image" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/bmi_margin_left_right"
-            android:layout_marginTop="@dimen/bmi_margin_top" android:layout_marginEnd="@dimen/bmi_margin_left_right"
-            android:visibility="visible" app:srcCompat="@drawable/avatar_bmi"
-            android:layout_marginBottom="@dimen/bmi_margin_bottom_elements"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="visible" app:srcCompat="@drawable/bmi_main"
+            android:layout_marginBottom="@dimen/bmi_margin_bottom_main_img"
             app:layout_constraintBottom_toTopOf="@+id/guideline" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.0"/>
-
+            app:layout_constraintVertical_bias="0.0" android:layout_marginTop="@dimen/bmi_margin_top"/>
     <TextView
             android:text="@string/bmi_main_mass_kg"
             android:layout_width="wrap_content"
@@ -42,7 +40,7 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/bmi_margin_left_right"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/bmi_margin_left_right"
             app:layout_constraintTop_toBottomOf="@+id/massTextView"
-            android:textAppearance="@style/TextAppearance.AppCompat" android:hint="@string/bmi_weight_hint"
+            android:textAppearance="@style/TextAppearance.AppCompat"
             app:layout_constraintHorizontal_bias="0.0"/>
     <TextView
             android:text="@string/bmi_main_default_bmi_display_value"
@@ -84,7 +82,7 @@
             app:layout_constraintTop_toBottomOf="@+id/heightTextView" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="@dimen/bmi_margin_left_right" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="@dimen/bmi_margin_left_right"
-            android:textAppearance="@style/TextAppearance.AppCompat" android:hint="@string/bmi_height_hint"
+            android:textAppearance="@style/TextAppearance.AppCompat"
             app:layout_constraintHorizontal_bias="0.0"/>
     <TextView
             android:text="@string/bmi_main_bmi_default_description"
@@ -97,4 +95,13 @@
             android:layout_marginBottom="@dimen/bmi_margin_bottom"
             app:layout_constraintBottom_toTopOf="@+id/countButton" app:layout_constraintVertical_bias="0.0"
             android:textSize="@dimen/bmi_status_text_size"/>
+    <ImageView
+            android:layout_width="51dp"
+            android:layout_height="53dp" app:srcCompat="@android:drawable/ic_menu_info_details"
+            android:id="@+id/bmi_description_button"
+            app:layout_constraintStart_toEndOf="@+id/bmiValueTextV" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/heightInput" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/countButton" app:layout_constraintVertical_bias="0.39"
+            app:layout_constraintHorizontal_bias="0.0" tools:srcCompat="@android:drawable/ic_menu_info_details"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
