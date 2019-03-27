@@ -17,34 +17,11 @@
     <string name="bmi_menu_imperial_units">Imperial units</string>
     <string name="bmi_menu_metric_units">Metric units</string>
     <string name="bmi_about_me_desc">"I tried so hard\nAnd got so far\nBut in the end\nIt doesn't even matter"</string>
-
-    <string name="bmi_underweight">Underweight</string>
-    <string name="bmi_normal">Normal</string>
-    <string name="bmi_overweight">Overweight</string>
-    <string name="bmi_obese">Obese</string>
-    <string name="bmi_extr_obese">Extreme obesity</string>
-
-    <string name="bmi_color_underweight">#3366CC</string>
-    <string name="bmi_color_normal">#00A693</string>
-    <string name="bmi_color_overweight">#ff9933</string>
-    <string name="bmi_color_obese">#B80000</string>
-    <string name="bmi_color_extr_obese">#993399</string>
-
-    <string name="bmi_desc_underweight">This indicates an extremely low Body Mass Index, with very little or unmeasurable body fat.
-         Malnutrition, health problems, or eating disorders are the most common causes for such a low figure.
-        If you find yourself in this range, you should seek a professional medical, physical, and dietary assessment.
-         You could be at risk of starvation, nutritional deficiencies, osteoporosis, and other serious health conditions.</string>
-    <string name="bmi_desc_normal">This indicates a very lean Body Mass Index, which means you have a low amount of body fat.
-        If you are an athlete, this can be desirable. If you are not an athlete, this could mean that your weight may be too low.
-        Being underweight can lower your immunity - you should consider gaining weight through good diet and exercise habits, to increase your muscle mass.</string>
-    <string name="bmi_desc_overweight">Great! This indicates a good Body Mass Index with the ideal, healthy amount of body fat.
-        This range is associated with living longest, and the lowest incidence of serious illness.
-        Coincidentally, it seems this ratio is what many individuals perceive to be the most aesthetically pleasing as well.</string>
-    <string name="bmi_desc_obese">This indicates that you are overweight, and have too much body fat.
-        You are at increased risk for a variety of illnesses at your present weight.
-        You should attempt to find ways to lower your Body Mass Index and the amount of body fat by changing your eating habits and exercising more.</string>
-    <string name="bmi_desc_extr_obese">This is a very high Body Mass Index, with an extreme excess of body fat that indicates an unhealthy condition.
-        You are at risk for heart disease, diabetes, high blood pressure, gall bladder disease, some cancers, and an increased risk of death from all causes.
-        *phew* You should consult with a physician plus consider changing your diet and starting an exercise regime to lose those pounds.</string>
-
+    <string name="mass_range_error">Mass has to be between %1$d and %2$d</string>
+    <string name="height_range_error">Height has to be between %1$d and %2$d</string>
+    <string name="bmi_description_default">BMI description</string>
+    <string name="bmi_default">BMI</string>
+    <string name="bmi_actionbar_title_info">Info</string>
+    <string name="bmi_about_me_button_text">Click me, I dare you</string>
+    <string name="bmi_author">Kamil Przeniosło</string>
 </resources>

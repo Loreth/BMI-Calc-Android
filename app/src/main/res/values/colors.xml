@@ -3,4 +3,10 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="colorBmi_extr_underweight">#993399</color>
+    <color name="colorBmi_underweight">#3366CC</color>
+    <color name="colorBmi_normal">#00A693</color>
+    <color name="colorBmi_overweight">#ff9933</color>
+    <color name="colorBmi_obese">#B80000</color>
 </resources>

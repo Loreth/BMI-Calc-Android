@@ -3,7 +3,7 @@
     <dimen name="bmi_margin_left_right">8dp</dimen>
     <dimen name="bmi_margin_bottom">8dp</dimen>
     <dimen name="bmi_margin_bottom_elements">8dp</dimen>
-    <dimen name="bmi_margin_top">3dp</dimen>
+    <dimen name="bmi_margin_top">0dp</dimen>
     <dimen name="bmi_margin_bottom_main_img">8dp</dimen>
     <dimen name="bmi_margin_top_elements">8dp</dimen>
     <dimen name="bmi_value_text_size">34sp</dimen>
@@ -11,5 +11,24 @@
     <dimen name="bmi_height_label_text_size">14sp</dimen>
     <dimen name="bmi_status_text_size">14sp</dimen>
     <dimen name="bmi_calculate_button_text_size">14sp</dimen>
-    <dimen name="bmi_h_guideline_percent">0.3</dimen>
+    <dimen name="bmi_info_left_right_margin">8dp</dimen>
+    <dimen name="bmi_info_bmi_value_size">25sp</dimen>
+    <dimen name="bmi_info_bmi_value_top_margin">33dp</dimen>
+    <dimen name="bmi_info_image_width">239dp</dimen>
+    <dimen name="bmi_info_image_height">115dp</dimen>
+    <dimen name="bmi_info_margin_bottom">8dp</dimen>
+    <dimen name="bmi_info_description_text_size">17sp</dimen>
+    <dimen name="bmi_info_description_top_margin">18dp</dimen>
+    <dimen name="bmi_about_me_image_height">238dp</dimen>
+    <dimen name="bmi_about_me_margin_top">8dp</dimen>
+    <dimen name="bmi_about_me_desc_text_size">24sp</dimen>
+    <dimen name="bmi_author_button_text_size">18sp</dimen>
+    <dimen name="bmi_about_me_margin_elem_top">8dp</dimen>
+    <dimen name="bmi_about_me_margin_elem_bottom">8dp</dimen>
+    <dimen name="bmi_main_image_width">0dp</dimen>
+    <dimen name="bmi_main_image_height">0dp</dimen>
+    <dimen name="bmi_main_mass_input_width">0dp</dimen>
+    <dimen name="bmi_main_height_input_width">0dp</dimen>
+    <dimen name="bmi_main_desc_button_width">52dp</dimen>
+    <dimen name="bmi_main_desc_button_height">52dp</dimen>
 </resources>
