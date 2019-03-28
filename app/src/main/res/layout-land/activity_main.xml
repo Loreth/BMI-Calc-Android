@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".MainActivity">
+
+    <TextView
+            android:text="@string/bmi_main_mass_kg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mass_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/bmi_margin_left_right"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/bmi_margin_left_right"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintTop_toTopOf="parent" android:textSize="@dimen/bmi_mass_label_text_size"
+            android:layout_marginTop="8dp"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/mass_input"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/bmi_margin_left_right"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/bmi_margin_left_right"
+            app:layout_constraintTop_toBottomOf="@+id/mass_text_view"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:text="@string/bmi_main_default_bmi_display_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bmi_value_text"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/bmi_margin_left_right"
+            android:layout_marginTop="@dimen/bmi_margin_top_elements"
+            app:layout_constraintTop_toBottomOf="@+id/height_input"
+            android:layout_marginBottom="@dimen/bmi_margin_bottom_elements"
+            app:layout_constraintBottom_toTopOf="@+id/count_button"
+            android:textSize="@dimen/bmi_value_text_size" android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.25" app:layout_constraintVertical_bias="0.393"
+            app:layout_constraintStart_toEndOf="@+id/bmi_main_image"/>
+    <Button
+            android:text="@string/bmi_main_count_bmi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/count_button" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/bmi_margin_left_right" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/bmi_margin_bottom_elements" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/bmi_margin_left_right"
+            android:textSize="@dimen/bmi_calculate_button_text_size"/>
+    <TextView
+            android:text="@string/bmi_main_height_cm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/height_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/mass_input" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/bmi_margin_left_right" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/bmi_margin_left_right" app:layout_constraintHorizontal_bias="0.084"
+            android:textSize="@dimen/bmi_height_label_text_size"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/height_input"
+            app:layout_constraintTop_toBottomOf="@+id/height_text_view" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/bmi_margin_left_right" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/bmi_margin_left_right"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:text="@string/bmi_main_bmi_default_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bmi_short_desc"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/bmi_margin_left_right"
+            app:layout_constraintTop_toBottomOf="@+id/bmi_value_text"
+            android:layout_marginBottom="@dimen/bmi_margin_bottom"
+            app:layout_constraintBottom_toTopOf="@+id/count_button" app:layout_constraintVertical_bias="0.263"
+            android:textSize="@dimen/bmi_status_text_size" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.219" app:layout_constraintStart_toEndOf="@+id/bmi_main_image"
+            android:visibility="invisible"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp" app:srcCompat="@drawable/bmi_main"
+            android:id="@+id/bmi_main_image"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/bmi_margin_left_right"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3" android:layout_marginEnd="@dimen/bmi_margin_left_right"
+            android:layout_marginBottom="@dimen/bmi_margin_bottom_main_img"
+            app:layout_constraintBottom_toTopOf="@+id/count_button"
+            android:layout_marginTop="3dp" app:layout_constraintTop_toBottomOf="@+id/height_input"
+    />
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guideline3"
+                                                android:orientation="vertical"
+                                                app:layout_constraintGuide_percent="0.6"/>
+    <ImageView
+            android:layout_width="49dp"
+            android:layout_height="46dp" app:srcCompat="@android:drawable/ic_menu_info_details"
+            android:id="@+id/bmi_description_button"
+            app:layout_constraintStart_toEndOf="@+id/bmi_value_text" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            tools:srcCompat="@android:drawable/ic_menu_info_details"
+            app:layout_constraintTop_toTopOf="@+id/bmi_value_text" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bmi_value_text" app:layout_constraintVertical_bias="0.0"
+            android:visibility="invisible"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

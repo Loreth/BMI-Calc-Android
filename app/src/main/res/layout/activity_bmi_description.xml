@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".bmi_description.BmiDescriptionActivity">
+
+        <ImageView
+                android:src="@drawable/bmi_desc"
+                android:layout_width="@dimen/bmi_info_image_width"
+                android:layout_height="@dimen/bmi_info_image_height" android:id="@+id/info_image" android:layout_marginTop="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/bmi_info_left_right_margin"/>
+        <TextView
+                android:text="@string/bmi_description_default"
+                android:id="@+id/bmi_full_description" android:layout_marginTop="@dimen/bmi_info_description_top_margin"
+                android:layout_below="@+id/info_image"
+                android:layout_alignParentEnd="true" android:layout_marginEnd="@dimen/bmi_info_left_right_margin"
+                android:layout_alignParentStart="true" android:layout_marginStart="@dimen/bmi_info_left_right_margin"
+                android:textAlignment="viewStart" android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/bmi_info_margin_bottom" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="@dimen/bmi_info_description_text_size"/>
+        <TextView
+                android:text="@string/bmi_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/bmi_value"
+                android:layout_marginTop="@dimen/bmi_info_bmi_value_top_margin" android:layout_alignParentTop="true"
+                android:textSize="@dimen/bmi_info_bmi_value_size" android:layout_toEndOf="@+id/info_image"
+                android:layout_marginStart="@dimen/bmi_info_left_right_margin"
+                android:textAlignment="center" android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/bmi_info_left_right_margin" android:textStyle="bold"/>
+    </RelativeLayout>
+</ScrollView>
