@@ -1,12 +1,11 @@
 package com.example.laby2
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import com.example.laby2.about_me.AboutMeActivity
 import com.example.laby2.bmi_description.BmiDescriptionActivity
 import com.example.laby2.logic.Bmi
@@ -14,7 +13,6 @@ import com.example.laby2.logic.BmiCategory
 import com.example.laby2.logic.BmiForKgCm
 import com.example.laby2.logic.BmiForLbIn
 import kotlinx.android.synthetic.main.activity_main.*
-import java.lang.NullPointerException
 import java.math.RoundingMode
 
 class MainActivity : AppCompatActivity() {
@@ -124,9 +122,9 @@ class MainActivity : AppCompatActivity() {
         if (mass_input.text.isBlank()) {
             mass_input.error = getString(R.string.bmi_empty_mass_error)
             return false
-        } else if (!bmi.isMassInRange(mass_input.text.toString().toInt())) {
+        } else if (!bmi.getMassRange().contains(mass_input.text.toString().toInt())) {
             val range = bmi.getMassRange()
-            mass_input.error = getString(R.string.mass_range_error, range.first, range.second)
+            mass_input.error = getString(R.string.mass_range_error, range.start, range.endInclusive)
             return false
         }
         return true
@@ -136,9 +134,9 @@ class MainActivity : AppCompatActivity() {
         if (height_input.text.isBlank()) {
             height_input.error = getString(R.string.bmi_empty_height_error)
             return false
-        } else if (!bmi.isHeightInRange(height_input.text.toString().toInt())) {
+        } else if (!bmi.getHeightRange().contains(height_input.text.toString().toInt())) {
             val range = bmi.getHeightRange()
-            height_input.error = getString(R.string.height_range_error, range.first, range.second)
+            height_input.error = getString(R.string.height_range_error, range.start, range.endInclusive)
             return false
         }
         return true

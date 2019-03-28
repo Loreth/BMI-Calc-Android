@@ -1,8 +1,8 @@
 package com.example.laby2.about_me
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.laby2.R
 import kotlinx.android.synthetic.main.activity_about_me.*
 
@@ -13,11 +13,11 @@ class AboutMeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_about_me)
 
         val actionbar = supportActionBar
-        actionbar!!.title = "About me"
+        actionbar!!.title = getString(R.string.bmi_about_me_actionbar_title)
         actionbar.setDisplayHomeAsUpEnabled(true)
 
         dare_button.setOnClickListener {
-            Toast.makeText(applicationContext, "You win, this time...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, getString(R.string.bmi_about_me_button_toast_text), Toast.LENGTH_SHORT).show()
         }
     }
 

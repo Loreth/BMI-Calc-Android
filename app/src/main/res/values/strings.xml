@@ -24,4 +24,6 @@
     <string name="bmi_actionbar_title_info">Info</string>
     <string name="bmi_about_me_button_text">Click me, I dare you</string>
     <string name="bmi_author">Kamil Przeniosło</string>
+    <string name="bmi_about_me_actionbar_title">About me</string>
+    <string name="bmi_about_me_button_toast_text">You win, this time...</string>
 </resources>
