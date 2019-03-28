@@ -22,7 +22,10 @@ class MainActivity : AppCompatActivity() {
 
         count_button.setOnClickListener {
             if (verifyData()) {
-                val bmiValue = bmi.countBmi(mass_input.text.toString().toInt(), height_input.text.toString().toInt())
+                val bmiValue = bmi.countBmi(
+                    mass_input.text.toString().toInt(),
+                    height_input.text.toString().toInt()
+                )
                 bmi_value_text.text = bmiValue.toBigDecimal().setScale(2, RoundingMode.HALF_EVEN).toString()
                 bmi_short_desc.text = BmiCategory.getCategory(bmiValue).shortDescription
                 bmi_value_text.setTextColor(BmiCategory.getBmiColor(resources, bmiValue))
