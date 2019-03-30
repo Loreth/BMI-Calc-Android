@@ -27,27 +27,27 @@ class BmiUnitTest {
     fun for_out_of_range_value_should_return_false_lb_in() {
         val bmi = BmiForLbIn()
         assertEquals(false, bmi.getHeightRange().contains(100000))
-        assertEquals(false, bmi.getMassRange().contains(100000))
+        assertEquals(false, bmi.getWeightRange().contains(100000))
     }
 
     @Test
     fun for_out_of_range_value_should_return_false_kg_cm() {
         val bmi = BmiForKgCm()
         assertEquals(false, bmi.getHeightRange().contains(100000))
-        assertEquals(false, bmi.getMassRange().contains(100000))
+        assertEquals(false, bmi.getWeightRange().contains(100000))
     }
 
     @Test
     fun for_in_range_value_should_return_false_lb_in() {
         val bmi = BmiForLbIn()
         assertEquals(true, bmi.getHeightRange().contains(60))
-        assertEquals(true, bmi.getMassRange().contains(130))
+        assertEquals(true, bmi.getWeightRange().contains(130))
     }
 
     @Test
     fun for_in_range_value_should_return_false_kg_cm() {
         val bmi = BmiForKgCm()
         assertEquals(true, bmi.getHeightRange().contains(180))
-        assertEquals(true, bmi.getMassRange().contains(70))
+        assertEquals(true, bmi.getWeightRange().contains(70))
     }
 }

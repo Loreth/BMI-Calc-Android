@@ -13,7 +13,7 @@
     <string name="bmi_main_bmi_value_format">#0.00</string>
     <string name="bmi_empty_mass_error">Mass input is blank!</string>
     <string name="bmi_empty_height_error">Height input is blank!</string>
-    <string name="bmi_about_me">About me</string>
+    <string name="bmi_menu_about_me">About me</string>
     <string name="bmi_menu_imperial_units">Imperial units</string>
     <string name="bmi_menu_metric_units">Metric units</string>
     <string name="bmi_about_me_desc">"I tried so hard\nAnd got so far\nBut in the end\nIt doesn't even matter"</string>
@@ -26,4 +26,6 @@
     <string name="bmi_author">Kamil Przeniosło</string>
     <string name="bmi_about_me_actionbar_title">About me</string>
     <string name="bmi_about_me_button_toast_text">You win, this time...</string>
+    <string name="bmi_menu_history">History</string>
+    <string name="bmi_history_action_bar_title">History</string>
 </resources>

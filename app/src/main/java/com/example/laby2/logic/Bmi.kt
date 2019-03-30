@@ -1,9 +1,9 @@
 package com.example.laby2.logic
 
 interface Bmi {
-    fun countBmi(mass: Int, height: Int): Double
+    fun countBmi(weight: Int, height: Int): Double
 
-    fun getMassRange(): IntRange
+    fun getWeightRange(): IntRange
 
     fun getHeightRange(): IntRange
 }

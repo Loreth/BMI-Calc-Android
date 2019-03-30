@@ -6,6 +6,9 @@
             android:id="@+id/action_change_units"
             android:title="@string/bmi_menu_imperial_units"/>
     <item
+            android:id="@+id/action_history"
+            android:title="@string/bmi_menu_history"/>
+    <item
             android:id="@+id/action_about_me"
-            android:title="@string/bmi_about_me"/>
+            android:title="@string/bmi_menu_about_me"/>
 </menu>

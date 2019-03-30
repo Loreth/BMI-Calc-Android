@@ -1,24 +1,28 @@
 package com.example.laby2
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.example.laby2.about_me.AboutMeActivity
-import com.example.laby2.bmi_description.BmiDescriptionActivity
-import com.example.laby2.logic.Bmi
-import com.example.laby2.logic.BmiCategory
-import com.example.laby2.logic.BmiForKgCm
-import com.example.laby2.logic.BmiForLbIn
+import com.example.laby2.aboutme.AboutMeActivity
+import com.example.laby2.bmidescription.BmiDescriptionActivity
+import com.example.laby2.history.HistoryActivity
+import com.example.laby2.logic.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.math.RoundingMode
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var prefs: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
 
         count_button.setOnClickListener {
             if (verifyData()) {
@@ -29,8 +33,11 @@ class MainActivity : AppCompatActivity() {
                 bmi_value_text.text = bmiValue.toBigDecimal().setScale(2, RoundingMode.HALF_EVEN).toString()
                 bmi_short_desc.text = BmiCategory.getCategory(bmiValue).shortDescription
                 bmi_value_text.setTextColor(BmiCategory.getBmiColor(resources, bmiValue))
+
                 bmi_description_button.visibility = View.VISIBLE
                 bmi_short_desc.visibility = View.VISIBLE
+
+                saveEntryToSharedPrefs(newHistoryEntry())
             }
         }
 
@@ -56,6 +63,10 @@ class MainActivity : AppCompatActivity() {
         }
         R.id.action_about_me -> {
             startActivity(Intent(this@MainActivity, AboutMeActivity::class.java))
+            true
+        }
+        R.id.action_history -> {
+            startActivity(Intent(this@MainActivity, HistoryActivity::class.java))
             true
         }
         else -> {
@@ -125,8 +136,8 @@ class MainActivity : AppCompatActivity() {
         if (mass_input.text.isBlank()) {
             mass_input.error = getString(R.string.bmi_empty_mass_error)
             return false
-        } else if (!bmi.getMassRange().contains(mass_input.text.toString().toInt())) {
-            val range = bmi.getMassRange()
+        } else if (!bmi.getWeightRange().contains(mass_input.text.toString().toInt())) {
+            val range = bmi.getWeightRange()
             mass_input.error = getString(R.string.mass_range_error, range.start, range.endInclusive)
             return false
         }
@@ -145,6 +156,33 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    private fun saveEntryToSharedPrefs(entry: BmiRecord) {
+        val oldHistory = prefs.getStringSet(PREFS_KEY_HISTORY, mutableSetOf())
+            .map { string -> BmiRecord.fromString(string) }
+            .sortedByDescending { record -> record.date }
+            .take(MAX_HISTORY_ENTRY_NUMBER - 1)
+            .toMutableSet()
+
+        oldHistory.add(entry)
+
+        val newHistory = oldHistory
+            .map { record -> record.toString() }
+            .toSortedSet(naturalOrder())
+
+        prefs.edit().putStringSet(PREFS_KEY_HISTORY, newHistory).apply()
+    }
+
+    private fun newHistoryEntry(): BmiRecord {
+        return BmiRecord(
+            "${mass_text_view.text} ${mass_input.text}",
+            "${height_text_view.text} ${height_input.text}",
+            bmi_value_text.text.toString(),
+            bmi_short_desc.text.toString(),
+            bmi_value_text.currentTextColor,
+            Date()
+        )
+    }
+
     companion object {
         private var metricUnits = true
         private var bmi: Bmi = BmiForKgCm()
@@ -157,5 +195,9 @@ class MainActivity : AppCompatActivity() {
         const val KEY_BMI_DESC_BUTTON_VISIBILITY = "bmiDescButtonVisibility"
         const val KEY_MASS_TEXT = "massText"
         const val KEY_HEIGHT_TEXT = "heightText"
+
+        const val PREFS_NAME = "prefs"
+        const val PREFS_KEY_HISTORY = "bmiHistory"
+        const val MAX_HISTORY_ENTRY_NUMBER = 10
     }
 }

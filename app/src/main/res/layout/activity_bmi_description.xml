@@ -9,7 +9,7 @@
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context=".bmi_description.BmiDescriptionActivity">
+            tools:context=".bmidescription.BmiDescriptionActivity">
 
         <ImageView
                 android:src="@drawable/bmi_desc"
