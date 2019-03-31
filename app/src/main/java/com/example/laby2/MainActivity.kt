@@ -78,6 +78,7 @@ class MainActivity : AppCompatActivity() {
         val unitsMenuItem: MenuItem = menu!!.findItem(R.id.action_change_units)
         if (metricUnits) unitsMenuItem.title = getString(R.string.bmi_menu_imperial_units)
         else unitsMenuItem.title = getString(R.string.bmi_menu_metric_units)
+        menu.findItem(R.id.action_history).isEnabled = prefs.contains(PREFS_KEY_HISTORY)
 
         return super.onPrepareOptionsMenu(menu)
     }
